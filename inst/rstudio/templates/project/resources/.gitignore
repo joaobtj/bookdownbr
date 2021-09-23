@@ -1,0 +1,8 @@
+book/
+docs/
+public/
+libs/
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata

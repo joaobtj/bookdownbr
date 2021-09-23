@@ -1,0 +1,28 @@
+--- 
+title: "Exemplo de uso do bookdown em português"
+author: "Autoria"
+date: "`r Sys.Date()`"
+description: "Este é um exemplo de um livro publicado com o pacote **bookdown** no formato *gitbook* em português"
+cover-image: image/cover.jpg
+apple-touch-icon: image/cover.jpg
+favicon: image/favicon.ico
+url: 'https\://www.example.com'
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+---
+
+# Prefácio
+
+
+```{r echo=FALSE, fig.align='center'}
+
+knitr::include_graphics("https://bookdown.org/yihui/bookdown/images/logo.png")
+
+```
+
+
+
+

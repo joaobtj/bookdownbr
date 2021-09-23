@@ -1,0 +1,32 @@
+bookdown::gitbook: #https://bookdown.org/yihui/bookdown/html.html#gitbook-style
+  css: style.css #arquivo .css
+  split_by: chapter #rmd, none, chapter, section, chapter+number, section+number
+  split_bib: yes #yes: adiciona as referências em cada página
+  includes:
+    in_header: header.html #incluir códigos no HEAD do html, por exemplo, google analytics
+  config:
+    toc:
+      collapse: none #subsection, section, none
+      scroll_highlight: yes
+      before: |
+        <li><a href="./">Exemplo bookdown em português</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado com bookdown</a></li>
+    toolbar:
+      position: fixed #fixed, static
+    search: yes
+    fontsettings:
+      theme: white #white, night, sepia
+      family: serif #sans, serif
+      size: 2 #1 a 4
+    download: null
+    sharing:
+      whatsapp: yes
+      facebook: yes
+      twitter: yes
+      linkedin: no
+      weibo: no
+      instapaper: no
+      vk: no
+      all: ['whatsapp', 'facebook', 'twitter', 'linkedin']
+    info: yes

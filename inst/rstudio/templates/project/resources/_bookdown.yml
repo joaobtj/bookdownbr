@@ -1,0 +1,26 @@
+book_filename: "book"
+delete_merged_file: true
+edit: https://gitlab.com/joaobtj/bookdownbr/edit/main/%s
+view: https://gitlab.com/joaobtj/bookdownbr/blob/main/%s
+output_dir: public #public para gitlab; docs para github
+language:
+  label:
+    fig: 'Figura '
+    tab: 'Tabela '
+    eq: 'Equação '
+    thm: 'Teorema '
+    lem: 'Lema '
+    cor: 'Corolário '
+    prp: 'Proposição '
+    cnj: 'Conjetura '
+    def: 'Definição '
+    exm: 'Exemple '
+    exr: 'Exercício '
+    hyp: 'Hipótese '
+    proof: 'Prova '
+    remark: 'Observação '
+    solution: 'Solução '
+  ui:
+    edit: Editar
+    chapter_name: 'Capítulo '
+    appendix_name: 'Apêndice '
