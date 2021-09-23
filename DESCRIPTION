@@ -16,3 +16,5 @@ RoxygenNote: 7.1.2
 Imports: 
     bookdown,
     here
+URL: https://github.com/joaobtj/bookdownbr
+BugReports: https://github.com/joaobtj/bookdownbr/issues
