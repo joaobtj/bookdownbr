@@ -3,22 +3,32 @@
 #' Arquivos basicos para bookdown em portugues
 #'
 #' @param path local em que sera criado o bookdown
+#' @param ... more
 #' @export
 #' @importFrom here here
-
-skeleton_bookdownbr <- function(path) {
+#' @examples
+#' bookdownbr::skeleton_bookdownbr(path = "c:/bookbr/brazil")
+skeleton_bookdownbr <- function(path, ...) {
 
   # ensure path exists
   dir.create(path, recursive = TRUE, showWarnings = FALSE)
 
-  onde <- here::here("inst", "rstudio", "templates", "project", "resources")
+  # copy the files from
+  where <- here::here("inst", "rstudio", "templates", "project", "resources")
+  files <- list.files(where, recursive = TRUE)
+  source <- file.path(where, files)
 
-  files <- list.files(onde)
-  from <- file.path(onde, files)
+  # copy the files to
+  target <- file.path(path, files)
 
-  file.copy(from, path)
+  # create new dir
+  lapply(unique(dirname(target)), dir_create)
 
+  # copy all files
+  file.copy(source, target)
 }
 
-
-
+# create non-existing directories
+dir_create <- function(path) {
+  if (!dir.exists(path)) dir.create(path)
+}

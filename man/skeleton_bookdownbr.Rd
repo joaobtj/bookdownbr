@@ -4,11 +4,16 @@
 \alias{skeleton_bookdownbr}
 \title{skeleton_bookdownbr}
 \usage{
-skeleton_bookdownbr(path)
+skeleton_bookdownbr(path, ...)
 }
 \arguments{
 \item{path}{local em que sera criado o bookdown}
+
+\item{...}{more}
 }
 \description{
 Arquivos basicos para bookdown em portugues
+}
+\examples{
+bookdownbr::skeleton_bookdownbr(path = "c:/bookbr/brazil")
 }
