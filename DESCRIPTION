@@ -12,9 +12,9 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
 Imports: 
-    bookdown,
-    here
+    here,
+    xfun
 URL: https://github.com/joaobtj/bookdownbr
 BugReports: https://github.com/joaobtj/bookdownbr/issues

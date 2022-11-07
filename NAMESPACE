@@ -2,3 +2,4 @@
 
 export(skeleton_bookdownbr)
 importFrom(here,here)
+importFrom(xfun,normalize_path)

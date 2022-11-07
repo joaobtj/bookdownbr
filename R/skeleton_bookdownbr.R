@@ -6,9 +6,13 @@
 #' @param ... more
 #' @export
 #' @importFrom here here
+#' @importFrom xfun normalize_path
 #' @examples
 #' bookdownbr::skeleton_bookdownbr(path = "c:/bookbr/brazil")
 skeleton_bookdownbr <- function(path, ...) {
+
+
+  path=xfun::normalize_path(path)
 
   # ensure path exists
   dir.create(path, recursive = TRUE, showWarnings = FALSE)
@@ -26,6 +30,9 @@ skeleton_bookdownbr <- function(path, ...) {
 
   # copy all files
   file.copy(source, target)
+
+
+  invisible(TRUE)
 }
 
 # create non-existing directories
