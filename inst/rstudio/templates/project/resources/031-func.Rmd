@@ -1,0 +1,11 @@
+# Funcionalidades
+
+## Página de erro 404
+
+Se o leitor tentar acessar uma página em seu livro que não pode ser encontrada, o navegador irá mostrar a página de erro 404.
+
+Esta página pode ser personalizada adicionando um arquivo com o nome `_404.Rmd` ou `_404.md` no diretório do projeto. 
+
+## Metadados para compartilhamento
+
+Metadados que são usados no compartilhamento sem redes sociais (Twitter, Facebook, etc.). No arquivo `index.Rmd`, pode-se configurar os parâmetros `url`, `cover-image`, `title` e `description`. Estes parâmetros são usados para criar um *card* detalhado no compartilhamento.

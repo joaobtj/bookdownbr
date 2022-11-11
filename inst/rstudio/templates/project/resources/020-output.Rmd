@@ -1,0 +1,89 @@
+# O arquivo `_output.yml` {#output}
+
+Este é um exemplo do conteúdo do arquivo `_output.yml`
+
+```yaml
+bookdown::gitbook: #https://bookdown.org/yihui/bookdown/html.html#gitbook-style
+  css: style.css #arquivo .css
+  split_by: chapter #rmd, none, chapter, section, chapter+number, section+number
+  split_bib: yes #yes: adiciona as referências em cada página
+  includes:
+    in_header: ga.html #incluir códigos no HEAD do html, por exemplo, google analytics
+  config:
+    toc:
+      collapse: none #subsection, section, none
+      scroll_highlight: yes
+      before: |
+        <li><a href="./">Exemplo mínimo de um e-book</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado com bookdown</a></li>
+    toolbar:
+      position: fixed #fixed, static
+    search: yes
+    fontsettings:
+      theme: white #white, night, sepia
+      family: serif #sans, serif
+      size: 2 #1 a 4
+    download: null
+    sharing:
+      whatsapp: yes
+      facebook: yes
+      twitter: yes
+      linkedin: no
+      weibo: no
+      instapaper: no
+      vk: no
+      all: ['whatsapp', 'facebook', 'twitter', 'linkedin']
+    info: yes
+
+```
+Para a saída GitBook (`bookdown::gitbook`), algumas das configurações são as seguintes:
+
+* `css`: para fornecer um ou mais arquivos CSS personalizados. 
+
+* `split_by`: especifica como dividir e nomear os arquivos HTML em múltiplas páginas. As opções são:
+  + `rmd`: cada arquivo Rmd cria um arquivo HTML.
+  + `none`: não separa o arquivo, ou seja, o livro todo está contido em um único HTML.
+  + `chapter`: separa para cada cabeçalho de primeiro nível.
+  + `section`: separa para cada cabeçalho de segundo nível.
+  + `chapter+number` and `section+number`: similar a `chapter` e `section`, mas os arquivos são numerados.
+
+* `split_bib`: se `split_bib = true` adiciona as referências ao final de cada página. Caso `split_bib = false`, as referências são colocadas em uma página dedicada no final.
+
+* `includes`: possibilita incluir um código HTML no arquivo de saída. Uma opção comum é incluir o código do Google Analytics (veja mais em [Google Analytics no Bookdown](http://tolentino.pro.br/post/google-analytics/)). As opções dentro de `includes` são `in_header`, `before_body` e `after_body`.
+
+As opções indentadas dentro de `config` são:  
+
+* `toc`: controla o sumário (table of contents), que aparece no lado direiro da tela.
+  + `collapse`: controla o desdobramento inicial do sumário. Os valores possíveis são: `subsection`, que desdobra o sumário até o segundo nível, `section` que desdobra o sumário até o primeiro nível e `none` que não desdobra.
+  + `scroll_highlight`: se `true`, destaca o item atual do sumário enquanto você rola a página.
+  + `before` and `after`: adiciona itens antes e/ou depois do sumário. A tag `<li>` separa os itens do sumário. O caracter | 
+
+* `toolbar`: controla o comportamento da barra superior.
+  + `position`: os valores podem ser `fixed`, que fixa a barra superior e ela estará sempre visível mesmo quando a página é rolada, ou  `static`, que não rola a barra junto com a página, ou seja, ela não ficará mais visível conforme a página é rolada.
+
+* `search`: se `true`, adiciona um botão de busca na barra superior.
+
+* `fontsettings`: ajusta os valores iniciais para o tema e fonte. Para desativar, ajuste o valor para `null`.
+  + `theme`: os valores são `white` para um tema claro, `night` para um tema escuro e `sepia` para um tema com efeito envelhecido.
+  + `family`:  `serif` para uma fonte serifada [(O que é uma fonte serifada?)](https://pt.wikipedia.org/wiki/Serifa) ou `sans` para uma fonte não serifada.
+  + `size`: tamanho da fonte, entre 1 e 4
+
+* `info`: botão de informação que lista os atalhos do teclado. Para desativar, definir como `false`.
+
+* `sharing`: Adiciona botões para compartilhamento em redes sociais. Para desativar, definir como `null`. 
+  + `whatsapp`: se definido como `true`, um botão para compartilhar a página no whatsapp irá aparecer na barra superior. Outras opções de redes sociais são: facebook, twitter, linkedin, weibo, instapaper, vk.
+  + `all`: opções que irão aparacer no menu *dropdown* de compartilhamento.
+
+
+
+Mais configurações podem ser encontradas na ajuda das funções `bookdown::gitbook`e `rmarkdown::html_document`
+
+* `number_sections`: TRUE to number section headings
+
+* `global_numbering`: If TRUE, number figures and tables globally throughout a document (e.g., Figure 1, Figure 2, ...). If FALSE, number them sequentially within sections (e.g., Figure 1.1, Figure 1.2, ..., Figure 5.1, Figure 5.2, ...). Note that global_numbering = FALSE will not work with number_sections = FALSE because sections are not numbered.
+
+* `code_folding`: 	
+Enable document readers to toggle the display of R code chunks. Specify "none" to display all code chunks. Specify "hide" or "show" to hide or show all R code chunks by default, and let readers toggle the states on browsers. See the Code folding
+
+* `toc_depth`: Depth of headers to include in table of contents. 

@@ -1,0 +1,42 @@
+# Publicar o e-book  {#publicar}
+
+Após finalizar a escrita do conteúdo, é necessário renderizá-lo para que seja possível publicá-lo.
+
+
+A renderização é feita pelo comando `bookdown::render_book()` com os formatos especificados no arquivo `_output.yml`^[veja o Capítulo \@ref(output)]. Outra opção é o atalho do teclado Ctrl+Shift+B.
+
+O e-book renderizado pode ser publicado em qualquer local que você desejar. Por exemplo, você pode hospedar os arquivos HTML em seu próprio servidor web. Abaixo, algumas opções.
+
+## RStudio Connect
+
+Uma das opções mais fáceis para publicar seu livro é utilizar o serviço RStudio Connect. O livro estará no domínio https://bookdown.org, que foi criado para hospedar os livros gratuitamente. 
+
+Inicialmente, voce deve criar uma conta em https://bookdown.org/connect/. Em seguida, execute o comando `bookdown::publish_book()` e será solicitado autorização para publicar em bookdown.org ^[A autorização é necessária apenas na primeira utilização.]
+
+Está feito! O livro está publicado, mas ainda devem ser feitas algumas configurações no site do RStudio Connect. Umas delas está relacionada à publicidade. Originalmente, o livro é publicado em modo privado, ou seja, apenas o autor pode visualizar. Para torná-lo píblico, altere para a opção Acces -> Sharing settings -> Anyone - no login required.
+
+Caso seja feita alguma atualização no conteúdo, basta executar novamente o comando `bookdown::publish_book()`.
+
+## Netlify Drop
+
+A plataforma https://netlify.com oferece hospedagem gratuita para sites estáticos. 
+Para publicar nesta plataforma, basta arrastar (*drop*) o diretório do livro renderizado localmente para dentro do site https://app.netlify.com/drop.
+
+Caso seja feita alguma atualização, é preciso arrastar novamente a pasta renderizada para dentro do site. 
+
+## GitHub Pages {#githubpages}
+
+Se você utiliza o serviço do GitHub para trabalhar em equipe, uma opção é o serviço GitHub Pages. 
+
+Após iniciar o projeto no RStudio, conecte com o GitHub pelos comandos
+
+`usethis::use_git()` e `usethis::use_github()`
+
+
+Use o GitHUb Actions para atualizar o site sempre que um commit for enviado.
+
+`usethis::use_github_action("bookdown")`
+
+Também é necessário usar o [`renv`](https://rstudio.github.io/renv/articles/renv.html) para gerenciar os pacotes. Use o comando `renv::snapshot()` sempre que necessário.
+
+Para finalizar, basta configurar a aba Settings -> Pages 

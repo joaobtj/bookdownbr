@@ -1,0 +1,42 @@
+# O arquivo `index.Rmd` {#index0}
+
+Este é o cabeçalho YAML do arquivo `index.Rmd`
+
+
+```yaml
+--- 
+title: "Publicando e-book com o bookdown"
+author: "João B. Tolentino Jr."
+date: "`r Sys.Date()`"
+description: "Este é um exemplo de um livro publicado com o pacote **bookdown** no formato *gitbook*"
+cover-image: image/cover.jpg
+apple-touch-icon: image/cover.jpg
+favicon: image/favicon.ico
+url: 'https\://curso-bookdown.tolentino.pro.br'
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: true
+---
+```
+
+* `title`: título do e-book.
+* `author`: nome do(s) autor(es) do e-book
+* `date`: data de publicação. Para buscar automaticamente data em qe=ue foi feita a última modificação, use a função `Sys.Date()`
+* `description`: um descrição sucinta utilizada pelos buscadores (SEO)
+* `cover-image`: uma imagem de capa para o e-book que irá aparecer quando compartilhar o link nas redes sociais.
+* `apple-touch-icon`: para IOS, o ícone quando o website é adiconada na tela inicial
+* `favicon`: ícone mostrado na barra de endereços ou nas abas  do navegador.
+* `url`: a *url* do website do e-book. Atenção para a barra esquerda que deve ser adicionada antes de dois pontos do endereço.
+
+* `site`: para renderizar o e-book no RStudio, clicando no botão Knit (ou Ctrl+Shift+K), definir a opção como `bookdown::bookdown_site`.
+
+* `documentclass`: definir como `book`.
+
+* `bibliography`: arquivos que contém a bibliografia, no formato *.bib
+
+* `biblio-style`: estilo das citações.
+
+* `link-citation`: definir como `true` para as citações também serem links.
+

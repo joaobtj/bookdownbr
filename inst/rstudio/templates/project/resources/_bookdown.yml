@@ -1,8 +1,11 @@
-book_filename: "book"
+book_filename: "bookdownbr"
 delete_merged_file: true
-edit: https://gitlab.com/joaobtj/bookdownbr/edit/main/%s
-view: https://gitlab.com/joaobtj/bookdownbr/blob/main/%s
-output_dir: public #public para gitlab; docs para github
+before_chapter_script: rm.R
+after_chapter_script:
+edit: https://github.com/joaobtj/curso-bookdownbr/edit/main/%s
+view: https://github.com/joaobtj/curso-bookdownbr/blob/main/%s
+output_dir: _book 
+new_session: false
 language:
   label:
     fig: 'Figura '
