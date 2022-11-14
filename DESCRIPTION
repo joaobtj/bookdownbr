@@ -16,6 +16,7 @@ RoxygenNote: 7.2.1
 Imports: 
     bookdown (>= 0.29),
     here,
+    knitr,
     xfun
 URL: https://github.com/joaobtj/bookdownbr
 BugReports: https://github.com/joaobtj/bookdownbr/issues
