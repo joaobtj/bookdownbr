@@ -3,6 +3,7 @@
 export(bookdownbr_skeleton)
 import(bookdown)
 import(knitr)
+import(rmarkdown)
 importFrom(here,here)
 importFrom(utils,download.file)
 importFrom(utils,unzip)

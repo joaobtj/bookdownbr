@@ -11,6 +11,15 @@ requireNamespace("bookdown")
 #'
 #' @import knitr
 #'
-import_bookdown <- function(){
+import_knitr <- function(){
   requireNamespace("knitr")
+}
+
+
+#' Import rmarkdown
+#'
+#' @import rmarkdown
+#'
+import_rmarkdown <- function(){
+  requireNamespace("rmarkdown")
 }
